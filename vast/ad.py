@@ -15,14 +15,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from creative import Creative
+from .creative import Creative
 
 REQUIRED_INLINE = ['AdSystem', 'AdTitle']
 REQUIRED_WRAPPER = ['AdSystem', 'VASTAdTagURI']
 
 
 def validateSettings(settings, requireds):
-    keys = settings.keys()
+    keys = list(settings.keys())
     for required in requireds:
         if required not in keys:
             raise Exception("Missing required settings: {required}".format(required=required))

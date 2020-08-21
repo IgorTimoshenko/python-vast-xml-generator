@@ -15,8 +15,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from ad import Ad
 from xmlbuilder import XMLBuilder
+
+from .ad import Ad
 
 
 class VAST(object):

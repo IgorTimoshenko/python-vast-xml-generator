@@ -20,7 +20,7 @@ REQURED_ATTRIBUTES = ["program", "width", "height", "xPosition", "yPosition"]
 
 class Icon(object):
     def __init__(self, settings=dict()):
-        keys = settings.keys()
+        keys = list(settings.keys())
         for required in keys:
             if required not in keys:
                 raise Exception("Missing required attribute '{attr}'".format(attr=required))

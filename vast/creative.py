@@ -15,8 +15,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-from icon import Icon
-from trackingEvent import TrackingEvent
+from .icon import Icon
+from .trackingEvent import TrackingEvent
 
 VALID_VIDEO_CLICKS = ['ClickThrough', 'ClickTracking', 'CustomClick']
 
@@ -107,7 +107,7 @@ class Creative(object):
         return self
 
     def attachClick(self, uri, _type=None):
-        if isinstance(uri, basestring):
+        if isinstance(uri, str):
             _type = 'NonLinearClickThrough'
         self.clicks = [{"type": _type, "uri": uri}]
         return self
